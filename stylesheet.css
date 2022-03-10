@@ -1,21 +1,30 @@
 
 .canvas-container {
-    display: grid;
     border: 0;
     margin: 0;
-    grid-template-columns: repeat(50,10px);
+    display: grid;
+    overflow: hidden;
+    border: black solid 1px;
+    width: 500px;
+    height: 500px;
+    /* grid-template-columns: repeat(16, auto); */
 }
 
-.canvas-container > div {
-    background-color: azure;  
-    height: 10px;  
+.canvas-container div {
+    background-color: blue; 
+    flex: 1 1 10px;  
 }
 
-.canvas-container > div:hover {
+/* .canvas-container div:hover {
     background-color: red;
-}
-
-/* div {
-    width: 10px;
-    height: 10px;
 } */
+
+.canvas-res-one {
+    grid-template-columns: repeat(16, auto);
+}
+.canvas-res-two {
+    grid-template-columns: repeat(32, auto);
+}
+.canvas-res-three {
+    grid-template-columns: repeat(64, auto);
+}

@@ -2,10 +2,17 @@ h1 {
     text-align: center;
 }
 
+.header {
+    font-size: 80px;
+    margin:0;
+    user-select: none;
+}
+
 body {
     background-color:#082032;
     color: white;
     font-family: 'Permanent Marker', cursive;
+    
 }
 
 .canvas-container {
@@ -60,8 +67,14 @@ body {
 .button {
     background-color:#082032;
     border-radius: 10px;
-    max-width: fit-content;
+    width: 200px;
+    text-align: center;
     padding: 10px;
     border: 1px solid black;
+    transition: ease 100ms;
+}
+
+.button:hover {
+    transform: scale(1.2);
 }
 

@@ -52,7 +52,7 @@ function canvasReset() {
 function classChange() {
     for(let div = 0; div < canvasChildren.length; div++) {
         canvasChildren[div].addEventListener('mouseover', ()=> {
-            canvasChildren[div].style.background = 'red';
+            canvasChildren[div].style.background = '#2C3333';
         })
     };
       
@@ -79,25 +79,17 @@ function colorRandomizer() {
     return color
 }
 
+classic.addEventListener('click', ()=> {
+    rainbow.style.background ='#082032';
+    buttonReset.style.background ='#082032' ;
+    classic.style.background = '#171717';
+})
 
-// function classicMode() {
-//     for (let i = 0;i <= canvasChildren.childElementCount; i++ ) {
-//         canvasChildren[i].addEventListener('mouseover', ()=>{
-//             canvasChildren[i].style.background = 'red';
-//         })
-// }
-
-
-
-// function rainbowMode() {
-//     for(let i = 0; i <= canvasSelector.childElementCount; i++ ) {
-//         canvasChildren[i].addEventListener('mouseover', ()=> {
-//             Math.floor(Math.random * 10)
-//             canvasChildren[i].style.background = 'red';
-//         })
-//     }
-// }
-
+rainbow.addEventListener('click', ()=> {
+    rainbow.style.background ='#171717';
+    buttonReset.style.background ='#082032' ;
+    classic.style.background = '#082032';
+})
 
 
 // Things you don't know yet

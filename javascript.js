@@ -23,10 +23,10 @@ let resText = document.querySelector('.resText');
 canvas()
 classChange()
 resText.textContent=`${slider.value} x ${slider.value}`;
-slider.addEventListener('input', canvasReset)
-slider.addEventListener('input', canvas)
-slider.addEventListener('input', classChange)
-slider.addEventListener('input', ()=> {
+slider.addEventListener('change', canvasReset)
+slider.addEventListener('change', canvas)
+slider.addEventListener('change', classChange)
+slider.addEventListener('change', ()=> {
     resText.textContent=`${slider.value} x ${slider.value}`;
 })
 slider.addEventListener('click', ()=> {

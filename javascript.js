@@ -8,6 +8,8 @@ let canvasChildren = canvasSelector.getElementsByTagName('div');
 const canvasChild = document.querySelectorAll(".canvas-container > div");
 let rainbow = document.querySelector('.rainbow');
 let classic = document.querySelector('.classic');
+let resSetting = document.querySelector('.res-setting');
+let resText = document.querySelector('.resText');
 
 // Create variable that creates more div elements and put it in a for loop.
 // Make that for loops default value to 16, but times it by the integer depending on the slider value.
@@ -20,15 +22,36 @@ let classic = document.querySelector('.classic');
 
 canvas()
 classChange()
-
+resText.textContent=`${slider.value} x ${slider.value}`;
 slider.addEventListener('input', canvasReset)
 slider.addEventListener('input', canvas)
 slider.addEventListener('input', classChange)
+slider.addEventListener('input', ()=> {
+    resText.textContent=`${slider.value} x ${slider.value}`;
+})
+slider.addEventListener('click', ()=> {
+    rainbow.style.background ='#082032';
+    classic.style.background = '#171717';
+})
 buttonReset.addEventListener('click', canvasReset)
 buttonReset.addEventListener('click', canvas)
 buttonReset.addEventListener('click', classChange)
+buttonReset.addEventListener('click', ()=> {
+    rainbow.style.background ='#082032';
+    classic.style.background = '#171717';
+})
 rainbow.addEventListener('click', rainbowMode)
 classic.addEventListener('click', classChange)
+classic.addEventListener('click', ()=> {
+    rainbow.style.background ='#082032';
+    classic.style.background = '#171717';
+})
+rainbow.addEventListener('click', ()=> {
+    rainbow.style.background ='#171717';  
+    classic.style.background = '#082032';
+})
+
+
 
 function canvas() {
 
@@ -79,17 +102,11 @@ function colorRandomizer() {
     return color
 }
 
-classic.addEventListener('click', ()=> {
-    rainbow.style.background ='#082032';
-    buttonReset.style.background ='#082032' ;
-    classic.style.background = '#171717';
-})
 
-rainbow.addEventListener('click', ()=> {
-    rainbow.style.background ='#171717';
-    buttonReset.style.background ='#082032' ;
-    classic.style.background = '#082032';
-})
+
+
+
+
 
 
 // Things you don't know yet

@@ -1,3 +1,12 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color:#082032;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+}
 
 .canvas-container {
     border: 0;
@@ -11,7 +20,7 @@
 }
 
 .canvas-container div {
-    background-color: blue; 
+    background-color:rgb(238, 238, 238); 
     flex: 1 1 10px;  
 }
 
@@ -19,12 +28,40 @@
     background-color: red;
 } */
 
-.canvas-res-one {
-    grid-template-columns: repeat(16, auto);
+.main-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 50px
 }
-.canvas-res-two {
-    grid-template-columns: repeat(32, auto);
+
+#resolution {
+    width: min-content;
 }
-.canvas-res-three {
-    grid-template-columns: repeat(64, auto);
+
+.res-setting {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
 }
+.settings {
+    background-color:#2C394B;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.button {
+    background-color:#082032;
+    border-radius: 10px;
+    max-width: fit-content;
+    padding: 10px;
+    border: 1px solid black;
+}
+
